@@ -6,12 +6,7 @@ const MONGODB_URL =
 const PORT = parseInt(process.env.PORT ?? 5000);
 const CLIENT_URL = process.env.CLIENT_URL ?? 'http://localhost:3000';
 const SESSION_SECRET = process.env.SESSION_SECRET ?? 'shhhhh!!!';
-
-const EMAIL_HOST = process.env.EMAIL_HOST || null;
-const EMAIL_PORT = process.env.EMAIL_PORT || null;
-
-const EMAIL_USERNAME = process.env.EMAIL_USERNAME || null;
-const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD || null;
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY ?? '';
 
 module.exports = {
     NODE_ENV,
@@ -19,8 +14,5 @@ module.exports = {
     PORT,
     CLIENT_URL,
     SESSION_SECRET,
-    EMAIL_HOST,
-    EMAIL_PASSWORD,
-    EMAIL_PORT,
-    EMAIL_USERNAME
+    OPENAI_API_KEY
 };
