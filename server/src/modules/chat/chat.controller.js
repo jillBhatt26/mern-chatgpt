@@ -2,6 +2,7 @@ const CustomError = require('../../common/CustomError');
 const ChatModel = require('./chat.model');
 const ChatService = require('./chat.service');
 const OpenAIService = require('./openai.service');
+const { createPromptChatBodySchema } = require('./chat.validation');
 
 class ChatController {
     openAiService = new OpenAIService();
@@ -12,8 +13,12 @@ class ChatController {
             if (!req.session || !req.session.userID)
                 throw new CustomError('Unauthenticated request!', 401);
 
+            const { text } = await createPromptChatBodySchema.validate(
+                req.body
+            );
+
             const chat = await this.chatService.create({
-                text: req.body.text,
+                text,
                 type: 'PROMPT',
                 userID: req.session.userID
             });
