@@ -6,13 +6,15 @@ class OpenAIService {
     generateText = (prompt, model = 'gpt-4.1-nano') =>
         new Promise(async (resolve, reject) => {
             try {
-                const response = await openaiClient.response.create({
+                const response = await openaiClient.responses.create({
                     model,
                     input: prompt
                 });
 
                 return resolve(response.output_text);
             } catch (error) {
+                console.log('error: ', error);
+
                 if (error instanceof OpenAI.APIError)
                     return reject(new CustomError(error.name, error.status));
 

@@ -23,6 +23,14 @@ const ChatSchema = new Schema(
             type: Schema.Types.ObjectId,
             ref: 'auths',
             required: [true, 'Chat user is required']
+        },
+        promptID: {
+            type: Schema.Types.ObjectId,
+            ref: 'chats'
+        },
+        responseID: {
+            type: Schema.Types.ObjectId,
+            ref: 'chats'
         }
     },
     { timestamps: true }

@@ -6,6 +6,6 @@ const chatController = new ChatController();
 
 chatRouter.get('/', chatController.fetchUserChats);
 chatRouter.post('/prompt', chatController.createPromptChat);
-chatRouter.post('/response', chatController.createResponseChat);
+chatRouter.post('/response/:promptID', chatController.createResponseChat);
 
 module.exports = chatRouter;
