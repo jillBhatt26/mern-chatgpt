@@ -54,9 +54,25 @@ const Conversation = () => {
                 <ContentLoader />
             ) : (
                 <>
-                    {chats.map((chat, index) => (
-                        <ChatBubble chat={chat} key={index} />
-                    ))}
+                    {chats.length > 0 ? (
+                        chats.map((chat, index) => (
+                            <ChatBubble chat={chat} key={index} />
+                        ))
+                    ) : (
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                height: '60vh'
+                            }}
+                        >
+                            <h5 className="text-center">
+                                Ask a question to start conversation
+                            </h5>
+                        </div>
+                    )}
                 </>
             )}
         </div>
