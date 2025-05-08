@@ -2,7 +2,8 @@ import axiosRequest from '../config/axios';
 import { SERVER_URL } from '../config/env';
 
 class AuthServices {
-    static AUTH_URL = `${SERVER_URL}/auth`;
+    // static AUTH_URL = `${SERVER_URL}/auth`;
+    static AUTH_URL = '/auth';
 
     static active = async () => {
         try {

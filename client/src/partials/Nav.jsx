@@ -111,7 +111,7 @@ const Nav = () => {
                     className="navbar-brand fs-4 gap-3"
                     style={{ border: 'none' }}
                 >
-                    MyChatGPT
+                    ChatterBOT
                 </Link>
 
                 <button

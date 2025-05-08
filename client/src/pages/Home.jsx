@@ -1,11 +1,7 @@
-import { useNavigate } from 'react-router-dom';
 import Footer from '../partials/Footer';
 import Nav from '../partials/Nav';
 
 const HomePage = () => {
-    // hooks
-    const navigate = useNavigate();
-
     return (
         <>
             <Nav />
