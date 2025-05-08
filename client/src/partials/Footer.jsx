@@ -15,7 +15,7 @@ const Footer = () => {
                 </span>
                 <span>
                     <a
-                        href="#"
+                        href="https://github.com/jillBhatt26/mern-chatgpt"
                         target="_blank"
                         className="text-info text-decoration-none"
                     >

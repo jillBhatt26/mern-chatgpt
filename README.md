@@ -1,26 +1,20 @@
-
 # MERN ChatGPT
 
 OpenAI's ChatGPT integration in the MERN stack
 
-
 ## Features
 
-- Authentication Module
-- Chat Module
-- Client route protection
-- Server auth middleware
-- OpenAI ChatGPT integration demo
-
+-   Authentication Module
+-   Chat Module
+-   Client route protection
+-   Server auth middleware
+-   OpenAI ChatGPT integration demo
 
 ## Tech Stack
 
 **Client:** React, Zustand, Bootstrap 5 Theme, Axios, Yup
 
 **Server:** Node, Express, MongoDB, Mongoose ODM, OpenAI API
-
-
-
 
 ## Server Environment Variables
 
@@ -38,7 +32,6 @@ To run this project, you will need to add the following environment variables to
 
 `OPENAI_API_KEY = get_your_own_key_from_openai`
 
-
 ## Client Environment Variables
 
 To run this project, you will need to add the following environment variables to client's .env file
@@ -48,8 +41,6 @@ To run this project, you will need to add the following environment variables to
 `VITE_PORT = 3000`
 
 `VITE_SERVER_URL = http://localhost:5000/api`
-
-
 
 ## Clone
 
@@ -66,12 +57,25 @@ Change to directory
 ```
 
 Install dependencies
+
 ```bash
   cd client / server && yarn install --frozen-lockfile
 ```
 
 Add .env file and add the env variables mentioned above
+
 ```bash
   cd client / server && touch .env
 ```
 
+Start server in development mode
+
+```bash
+  cd server && yarn dev
+```
+
+Start client in development mode
+
+```bash
+  cd client && yarn dev
+```
