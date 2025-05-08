@@ -1,5 +1,7 @@
 import Footer from '../partials/Footer';
 import Nav from '../partials/Nav';
+import Conversation from '../components/Conversation';
+import PromptChatForm from '../components/PromptChatForm';
 
 const HomePage = () => {
     return (
@@ -7,17 +9,8 @@ const HomePage = () => {
             <Nav />
 
             <div className="container">
-                <div
-                    style={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        height: '60vh'
-                    }}
-                >
-                    <h3 className="text-center">Home Page</h3>
-                </div>
+                <Conversation />
+                <PromptChatForm />
             </div>
 
             <Footer />
